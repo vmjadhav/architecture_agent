@@ -7,6 +7,8 @@ import tempfile
 from pathlib import Path
 import re
 import os
+from sample_usecase_mermaid_markdown import SAMPLE_ER_DIAGRAM, DB_SCHEMA, JOIN_DIAGRAM
+
 print(os.path.exists("./mermaid_tool"))
 
 def estimate_density(svg_content: str):
@@ -123,25 +125,34 @@ def render_mermaid(mermaid_code: str, output_file: str):
 # Example usage:
 
 mermaid_code = XY_BAR_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/xybarchart_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/xybarchart_diagram.png")
 
 mermaid_code = PIE_CHART
-render_mermaid(mermaid_code, "./mermaid_tool/pie_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/pie_diagram.png")
 
 mermaid_code = KANBAN_BOARD
-render_mermaid(mermaid_code, "./mermaid_tool/kanban_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/kanban_diagram.png")
 
 mermaid_code = FLOW_CHART
-render_mermaid(mermaid_code, "./mermaid_tool/flowchart_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/flowchart_diagram.png")
 
 mermaid_code = ARCHITECTURE_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/architecture_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/architecture_diagram.png")
 
 mermaid_code = CLASS_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/class_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/class_diagram.png")
 
 mermaid_code = SEQUENCE_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/sequence_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/sequence_diagram.png")
 
 mermaid_code = ER_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/er_diagram.png")
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/er_diagram.png")
+
+mermaid_code = SAMPLE_ER_DIAGRAM
+render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_er_diagram.png")
+
+mermaid_code = DB_SCHEMA
+render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_db_schema_diagram.png")
+
+mermaid_code = JOIN_DIAGRAM
+render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_join_diagram.png")
