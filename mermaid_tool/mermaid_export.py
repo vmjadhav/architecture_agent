@@ -1,7 +1,7 @@
 # import sys
 # import os
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from mermaid_markdowns import ER_DIAGRAM, SEQUENCE_DIAGRAM, FLOW_CHART, ARCHITECTURE_DIAGRAM, CLASS_DIAGRAM, XY_BAR_DIAGRAM, PIE_CHART, KANBAN_BOARD
+from mermaid_markdowns import ER_DIAGRAM, SEQUENCE_DIAGRAM, FLOW_CHART, ARCHITECTURE_DIAGRAM, CLASS_DIAGRAM, XY_BAR_DIAGRAM, PIE_CHART, KANBAN_BOARD, TURBONOMIC_ARCH_DIAGRAM
 import subprocess
 import tempfile
 from pathlib import Path
@@ -124,35 +124,39 @@ def render_mermaid(mermaid_code: str, output_file: str):
 
 # Example usage:
 
-mermaid_code = XY_BAR_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/xybarchart_diagram.png")
+# mermaid_code = XY_BAR_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/xybarchart_diagram.png")
 
-mermaid_code = PIE_CHART
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/pie_diagram.png")
+# mermaid_code = PIE_CHART
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/pie_diagram.png")
 
-mermaid_code = KANBAN_BOARD
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/kanban_diagram.png")
+# mermaid_code = KANBAN_BOARD
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/kanban_diagram.png")
 
-mermaid_code = FLOW_CHART
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/flowchart_diagram.png")
+# mermaid_code = FLOW_CHART
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/flowchart_diagram.png")
 
-mermaid_code = ARCHITECTURE_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/architecture_diagram.png")
+# mermaid_code = ARCHITECTURE_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/architecture_diagram.png")
 
-mermaid_code = CLASS_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/class_diagram.png")
+# mermaid_code = CLASS_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/class_diagram.png")
 
-mermaid_code = SEQUENCE_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/sequence_diagram.png")
+# mermaid_code = SEQUENCE_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/sequence_diagram.png")
 
-mermaid_code = ER_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/er_diagram.png")
+# mermaid_code = ER_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/er_diagram.png")
 
-mermaid_code = SAMPLE_ER_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_er_diagram.png")
+mermaid_code = TURBONOMIC_ARCH_DIAGRAM
+render_mermaid(mermaid_code, "./mermaid_tool/arch_diagram/turbo_arch_diagram.png")
 
-mermaid_code = DB_SCHEMA
-render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_db_schema_diagram.png")
+# mermaid_code = SAMPLE_ER_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_er_diagram.png")
 
-mermaid_code = JOIN_DIAGRAM
-render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_join_diagram.png")
+# mermaid_code = DB_SCHEMA
+# render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_db_schema_diagram.png")
+
+# mermaid_code = JOIN_DIAGRAM
+# render_mermaid(mermaid_code, "./mermaid_tool/sample_arch/sample_join_diagram.png")
+

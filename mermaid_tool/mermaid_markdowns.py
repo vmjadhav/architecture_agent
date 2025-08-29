@@ -292,3 +292,56 @@ kanban
   id12[Can't reproduce]
     id3[Weird flickering in Firefox]
 """
+
+
+TURBONOMIC_ARCH_DIAGRAM = """
+graph TD
+    %% IT Environment and Subcomponents
+    A[IT Environment] -->|Metrics & Config via APIs| B[Data Collection Layer<br>Agentless]
+    A --> A1[Public Clouds<br>AWS, Azure, GCP]
+    A --> A2[Private Clouds<br>VMware, Hyper-V]
+    A --> A3[Containers<br>Kubernetes, OpenShift]
+    A --> A4[Databases<br>Azure SQL, RDS]
+    A --> A5[Monitoring Tools<br>CloudWatch, AppDynamics]
+
+    %% Core Processing Flow
+    B -->|Real-Time & Historical Data| C[Abstraction Layer<br>Supply Chain Model]
+    C -->|Application-Infrastructure Mapping| D[Turbonomic Engine<br>AI-Driven Analytics]
+    D -->|Optimization Decisions| E[Automation & Orchestration Layer]
+    D -->|What-If Scenarios & Plans| F[User Interface & Dashboard]
+
+    %% Automation and Feedback Loop
+    E -->|Automated Actions<br>Scale, Resize, Move| A
+    E -->|Recommendations| F
+    F -->|Insights, Migration Plans| G[IT Operations Teams]
+
+    %% Integration Layer
+    subgraph Integrations
+        E -->|APIs & Automation| H[External Tools<br>Terraform, ServiceNow, Ansible]
+        D -->|Monitoring Integration| A5
+    end
+
+    %% Deployment Options
+    subgraph Deployment Options
+        D --> I1[SaaS<br>Hosted on AWS]
+        D --> I2[On-Premises<br>EKS, OpenShift, EC2]
+    end
+
+    %% Styling for Clarity
+    style A fill:#e6f3ff,stroke:#0052cc,stroke-width:2px
+    style A1 fill:#f0f8ff,stroke:#0052cc,stroke-width:1px
+    style A2 fill:#f0f8ff,stroke:#0052cc,stroke-width:1px
+    style A3 fill:#f0f8ff,stroke:#0052cc,stroke-width:1px
+    style A4 fill:#f0f8ff,stroke:#0052cc,stroke-width:1px
+    style A5 fill:#f0f8ff,stroke:#0052cc,stroke-width:1px
+    style B fill:#b3d9ff,stroke:#0052cc,stroke-width:2px
+    style C fill:#99ccff,stroke:#0052cc,stroke-width:2px
+    style D fill:#80bfff,stroke:#0052cc,stroke-width:2px
+    style E fill:#66b2ff,stroke:#0052cc,stroke-width:2px
+    style F fill:#ffd700,stroke:#0052cc,stroke-width:2px
+    style G fill:#e6e6e6,stroke:#333,stroke-width:2px
+    style H fill:#f0f0f0,stroke:#333,stroke-width:2px
+    style I1 fill:#f0f0f0,stroke:#333,stroke-width:1px
+    style I2 fill:#f0f0f0,stroke:#333,stroke-width:1px
+
+"""

@@ -25,29 +25,29 @@ erDiagram
 """
 
 DB_SCHEMA = """
-graph TD
-    subgraph Customers
-        C1[CustomerID: INT PK]
-        C2[FirstName: VARCHAR]
-        C3[LastName: VARCHAR]
-    end
-    subgraph Orders
-        O1[OrderID: INT PK]
-        O2[CustomerID: INT FK]
-        O3[OrderDate: DATE]
-    end
-    subgraph OrderDetails
-        OD1[OrderID: INT FK, PK]
-        OD2[ProductID: INT FK, PK]
-        OD3[Quantity: INT]
-    end
-    subgraph Products
-        P1[ProductID: INT PK]
-        P2[ProductName: VARCHAR]
-    end
-    Customers --> Orders
-    Orders --> OrderDetails
-    OrderDetails --> Products
+    graph TD
+        subgraph Customers
+            C1[CustomerID: INT PK]
+            C2[FirstName: VARCHAR]
+            C3[LastName: VARCHAR]
+        end
+        subgraph Orders
+            O1[OrderID: INT PK]
+            O2[CustomerID: INT FK]
+            O3[OrderDate: DATE]
+        end
+        subgraph OrderDetails
+            OD1[OrderID: INT FK, PK]
+            OD2[ProductID: INT FK, PK]
+            OD3[Quantity: INT]
+        end
+        subgraph Products
+            P1[ProductID: INT PK]
+            P2[ProductName: VARCHAR]
+        end
+        Customers --> Orders
+        Orders --> OrderDetails
+        OrderDetails --> Products
 """
 
 JOIN_DIAGRAM = """
