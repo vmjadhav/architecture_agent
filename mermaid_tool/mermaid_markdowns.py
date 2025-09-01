@@ -345,3 +345,88 @@ graph TD
     style I2 fill:#f0f0f0,stroke:#333,stroke-width:1px
 
 """
+
+OR_TOOL = """
+graph TD
+    %% Input Sources
+    A[GCP Environment] -->|Resource Inventory| B[Data Collection Layer]
+    A -->|Usage Metrics| B
+    A -->|Billing Data| B
+    A --> A1[Cloud Monitoring<br>Real-Time Metrics]
+    A --> A2[BigQuery<br>Billing Data Exports]
+    A --> A3[Cloud Billing Catalog API<br>Pricing Data]
+    A --> A4[Business Constraints<br>& Policies]
+
+    %% Data Processing
+    B -->|Raw Metrics & Data| C[DataFlow ETL Pipeline<br>Preprocessing]
+    C -->|Processed Data| D[Google OR-Tools<br>Optimization Engine]
+
+    %% Optimization and Output
+    D -->|Optimal Solution| E[Recommendation Engine]
+    E -->|Recommendations| F[Visualization Dashboard]
+    E -->|Actions| A
+    F -->|Current vs. Optimized Spend| G[Business Users/IT Teams]
+
+    %% Styling for Clarity
+    style A fill:#e6f3ff,stroke:#4285f4,stroke-width:2px
+    style A1 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A2 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A3 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A4 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style B fill:#b3d9ff,stroke:#4285f4,stroke-width:2px
+    style C fill:#99ccff,stroke:#4285f4,stroke-width:2px
+    style D fill:#80bfff,stroke:#4285f4,stroke-width:2px
+    style E fill:#66b2ff,stroke:#4285f4,stroke-width:2px
+    style F fill:#ffd700,stroke:#4285f4,stroke-width:2px
+    style G fill:#e6e6e6,stroke:#333,stroke-width:2px
+
+"""
+
+OR_AGENT = """
+
+graph TD
+    %% Input Sources
+    A[GCP Environment] -->|Resource Inventory| B[Data Collection Layer]
+    A -->|Usage Metrics| B
+    A -->|Billing Data| B
+    A -->|Constraints & Policies| B
+    A --> A1[Cloud Monitoring<br>Real-Time Metrics]
+    A --> A2[BigQuery<br>Billing Data Exports]
+    A --> A3[Cloud Billing Catalog API<br>Pricing Data]
+    A --> A4[Business Constraints<br>& Policies]
+
+    %% Data Processing
+    B -->|Raw Metrics & Data| C[DataFlow ETL Pipeline<br>Preprocessing]
+    C -->|Processed Data| D[Google OR-Tools<br>Optimization Engine]
+
+    %% Optimization and Recommendation
+    D -->|Optimal Solution| E[Recommendation Engine]
+    E -->|Solution & Input Data| F[Google ADK Agent]
+    F -->|Jargon-Free Recommendations| G[Visualization Dashboard]
+    E -->|Recommendations| G
+    G -->|Current vs. Optimized Spend| H[Business Users/IT Teams]
+    E -->|Actions| A
+
+    %% Deployment
+    subgraph Deployment
+        F -->|Deploy| I[Cloud Run/Cloud Functions]
+        D -->|Deploy| I
+        C -->|Deploy| I
+    end
+
+    %% Styling for Clarity
+    style A fill:#e6f3ff,stroke:#4285f4,stroke-width:2px
+    style A1 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A2 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A3 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style A4 fill:#f0f8ff,stroke:#4285f4,stroke-width:1px
+    style B fill:#b3d9ff,stroke:#4285f4,stroke-width:2px
+    style C fill:#99ccff,stroke:#4285f4,stroke-width:2px
+    style D fill:#80bfff,stroke:#4285f4,stroke-width:2px
+    style E fill:#66b2ff,stroke:#4285f4,stroke-width:2px
+    style F fill:#4da8ff,stroke:#4285f4,stroke-width:2px
+    style G fill:#ffd700,stroke:#4285f4,stroke-width:2px
+    style H fill:#e6e6e6,stroke:#333,stroke-width:2px
+    style I fill:#f0f0f0,stroke:#4285f4,stroke-width:2px
+
+"""
